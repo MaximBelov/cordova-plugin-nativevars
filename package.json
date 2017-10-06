@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-nativevars",
+  "version": "1.0.0",
+  "description": "Custom Cordova Native Variables",
+  "cordova": {
+    "id": "cordova-plugin-nativevars",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanodeveloper/cordova-plugin-nativevars.git"
+  },
+  "keywords": [
+  ],
+  "author": "kanodev",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/kanodeveloper/cordova-plugin-nativevars/issues"
+  },
+  "homepage": "https://github.com/kanodeveloper/cordova-plugin-nativevars"
+}

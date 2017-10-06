@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2017 Kano Applications Inc. All rights reserved.
+  Use of this source code is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-nativevars"
+        version="1.0.0">
+
+    <name>Custom Cordova Native Variables</name>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/kanodeveloper/cordova-plugin-nativevars.git</repo>
+    <issue>https://github.com/kanodeveloper/cordova-plugin-nativevars/issues</issue>
+
+    <js-module src="www/nativevars.js" name="NativeVars">
+        <clobbers target="NativeVars" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NativeVarsPlugin">
+                <param name="ios-package" value="NativeVarsPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/NativeVarsPlugin.h" />
+        <source-file src="src/ios/NativeVarsPlugin.m" />
+    </platform>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NativeVarsPlugin">
+                <param name="android-package" value="com.kanoapps.cordova.nativevars.NativeVarsPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/NativeVarsPlugin.java" target-dir="src/com/kanoapps/cordova/nativevars" />
+    </platform>
+</plugin>
