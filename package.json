@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-nativevars",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom Cordova Native Variables",
   "cordova": {
     "id": "cordova-plugin-nativevars",

@@ -6,7 +6,7 @@
 -->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-nativevars"
-        version="1.0.0">
+        version="1.0.2">
 
     <name>Custom Cordova Native Variables</name>
     <keywords>cordova</keywords>

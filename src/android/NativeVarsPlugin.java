@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import android.provider.Settings;
 /**
  * Cordova plugin that returns custom native variables
  */
@@ -62,6 +63,11 @@ public class NativeVarsPlugin extends CordovaPlugin {
                 Long launchTimestamp = System.currentTimeMillis();
                 r.put("launchTimestamp", launchTimestamp.toString());
                 r.put("cordovaDataDirectory", "file://" + this.cordova.getActivity().getFilesDir().toString() + "/");
+
+                String testLabSetting = Settings.System.getString(this.cordova.getActivity().getContentResolver(), "firebase.test.lab");
+                if ("true".equals(testLabSetting)) {
+                    r.put("isTestLab", testLabSetting);
+                }
 
                 callbackContext.success(r);
 

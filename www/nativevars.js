@@ -17,6 +17,7 @@ var NativeVarsPlugin = function () {
             that.appVersionOld = info.appVersionOld;
             that.cordovaDataDirectory = info.cordovaDataDirectory;
             that.launchTimestamp = info.launchTimestamp;
+            that.isTestLab = info.hasOwnProperty('isTestLab') ? true : false;
             that.buildVersion = parseInt(info.buildVersion, 10);
             channel.onCordovaAppVersionReady.fire();
         },function(e) {
